@@ -1,0 +1,14 @@
+{% extends "crud/base.html" %}
+{% load bootstrap4 %}
+
+{% block title %}商品詳細{% endblock %}
+{% block content %}
+<h1>商品詳細</h1>
+
+<form method="post" enctype="multipart/form-data">
+   {% csrf_token %}
+   {% bootstrap_form form %}
+   <br>
+   <a href="{% url 'list' %}">戻る</a>
+</form>
+{% endblock %}
